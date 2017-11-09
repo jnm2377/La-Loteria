@@ -1,0 +1,148 @@
+* {
+  /*border: 1px solid gold;*/
+}
+
+/*******************************
+              GENERAL
+********************************/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+} /*Body margins allow content to cover full screen*/
+
+
+.textbox {
+  margin: 150px auto;
+  height: 350px;
+  width: 350px;
+  color: white;
+  font-family: arial, sans-serif;
+  text-align: center;
+}
+
+/*******************************
+              NAV
+********************************/
+.nav {
+  background: rgba(181, 25, 92, 1);;
+  color: white;
+  text-align: center;
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(181, 25, 92, 1);
+}
+
+#nav-items{
+  display: flex;
+  justify-content: center;
+}
+
+#hearts {
+  vertical-align: middle;
+  margin: 32px;
+}
+
+#hearts:hover{
+  color: black;
+}
+
+/******************************
+          START MODAL
+*******************************/
+#modal-start {
+  position: fixed;
+  z-index: 1;/*makes it come to the front.*/
+  justify-content: center;
+  top: 0;
+  left: 0; /*sets margins to 0*/
+  height: 100%;
+  width: 100%; /*makes it take up the whole window*/
+  overflow: auto;
+  background-color: rgba(181, 25, 92, 0.9);
+
+  display: block;
+      /*display will change to none when clicked out of.*/
+}
+
+input {
+  background: none;
+  height: 30px;
+  border: none;
+  border-bottom: 3px solid white;
+  text-align: center;
+  color: white;
+  font-family: arial,sans-serif;
+  font-size: 20px;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, .5);
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#submit {
+  height: 35px;
+  margin-left: 20px;
+  background-color: white;
+  border: none;
+  color: rgba(181, 25, 92, 1);
+  text-align: center;
+  font-family: arial,sans-serif;
+  font-size: 20px;
+  border-radius: 2px;
+  outline: none;
+}
+
+#submit:hover {
+  background-color: black;
+  color: white;
+}
+
+/******************************
+          NAV MODAL
+*******************************/
+
+#modal-instructions {
+  position: fixed;
+  z-index: 1;/*makes it come to the front.*/
+  justify-content: center;
+  top: 0;
+  left: 0; /*sets margins to 0*/
+  height: 100%;
+  width: 100%; /*makes it take up the whole window*/
+  overflow: auto;
+  line-height: 30px;
+  background-color: rgba(181, 25, 92, 0.9);
+
+  display: none;
+      /*display will change to none when clicked out of.*/
+}
+
+#close {
+  height: 35px;
+  margin-top: 20px;
+  background-color: white;
+  border: none;
+  color: rgba(181, 25, 92, 1);
+  text-align: center;
+  font-family: arial,sans-serif;
+  font-size: 20px;
+  border-radius: 2px;
+  outline: none;
+}
+
+#close:hover {
+  background-color: black;
+  color: white;
+}
