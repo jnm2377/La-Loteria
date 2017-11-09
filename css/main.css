@@ -5,10 +5,11 @@
 /*******************************
               GENERAL
 ********************************/
-body {
+html, body {
   margin: 0;
   padding: 0;
   background-color: white;
+  height: 100%;
 } /*Body margins allow content to cover full screen*/
 
 
@@ -145,4 +146,38 @@ input::-webkit-inner-spin-button {
 #close:hover {
   background-color: black;
   color: white;
+}
+
+/******************************
+          BOARDS
+*******************************/
+
+.container, .grid, .board {
+  border: 1px solid gold;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  width: 75%;
+  height: 100%;
+}
+
+.grid {
+  height: 90%;
+  width: 40%;
+  margin: auto;
+}
+
+.board {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  height: 25%;
+  width: 25%;
+  justify-content: center;
 }
