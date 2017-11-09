@@ -3,13 +3,27 @@ $( () => {
   /******************************
         GENERATE BOARD
   *******************************/
+const $container = $('.container');
 
-let $grid = $('<div>').addClass('grid');
-let $board = $('<div>').addClass('board');
-let $row1 = $('<div>');
-let $row2 = $('<div>');
-let $row3 = $('<div>');
-let $row4 = $('<div>');
+
+const generateBoards = ($numberOfPlayers) => {
+  for (let i = 0; i < $numberOfPlayers; i++){
+    let $grid = $('<div>').addClass('grid').attr('id', i);
+    let $board = $('<div>').addClass('board');
+      for (let r=0; r<4; r++){
+        let $row = $('<div>');
+          for (let img=0 ; img<4; img++){
+            let $img = $('<img>').attr('src', '#');
+            $row.append($img);
+          }
+        $board.append($row);
+      }
+    $grid.append($board);
+    $container.append($grid);
+  }
+}
+
+
 
 
 
@@ -23,6 +37,8 @@ let $row4 = $('<div>');
 *******************************/
 const closeStart= () => {
   $('#modal-start').css('display', 'none');
+  let $numberOfPlayers = $('#player-input').val();
+  generateBoards($numberOfPlayers);
 }
 
 const openNav= () => {
@@ -32,6 +48,7 @@ const openNav= () => {
 const closeNav= () => {
   $('#modal-instructions').css('display', 'none');
 }
+
 
 $('#submit').on('click', closeStart);
 $('#hearts').on('click', openNav);
