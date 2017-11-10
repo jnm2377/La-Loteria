@@ -4,12 +4,12 @@ $( () => {
         BOARD OBJECT CLASS
   *******************************/
 
-const class Board {
-  constructor(id) {
-    this.boardId: id,
-    this.points: 0,
-  }
-}
+// const class Board {
+//   constructor(id) {
+//     this.boardId: id,
+//     this.points: 0,
+//   }
+// }
 
 
   /******************************
@@ -36,7 +36,7 @@ const generateBoards = ($numberOfPlayers) => {
     $grid.append($name);
     $container.append($grid);
     players = i;
-    const boardObj = new Board(i);
+    // const boardObj = new Board(i);
   }
 
   $('img.card').on('click', clickCard);
@@ -63,7 +63,7 @@ const generateBoardsDefault = () => {
     $grid.append($name);
     $container.append($grid);
     players = i;
-    const boardObj = new Board(i);
+    // const boardObj = new Board(i);
   }
 }
 
@@ -75,7 +75,7 @@ const generateBoardsDefault = () => {
 
 const clickCard = () => {
   $(event.currentTarget).attr('class', 'overlay');
-  let grid = $(event.currentTarget).parent().parent().parent();
+  // let grid = $(event.currentTarget).parent().parent().parent();
 
   const unclickCard = () => {
     $(event.currentTarget).attr('class', 'card');
@@ -98,20 +98,20 @@ const clickCard = () => {
 // if returns false, stop
 // if all true, invoke winner function
 
-const checkWinner = () => {
-
-  for (let i = 1; i <= players; i++){
-    for (let r = 0; r < 4; r++){
-      for (let card = 0; card < 4; card++){
-        if ($('#'+ i).eq(0).eq(r).eq(card).hasClass('overlay')) {
-          console.log('winner');
-        } else {
-          return false;
-        }
-      }
-    }
-  }
-}
+// const checkWinner = () => {
+//
+//   for (let i = 1; i <= players; i++){
+//     for (let r = 0; r < 4; r++){
+//       for (let card = 0; card < 4; card++){
+//         if ($('#'+ i).eq(0).eq(r).eq(card).hasClass('overlay')) {
+//           console.log('winner');
+//         } else {
+//           return false;
+//         }
+//       }
+//     }
+//   }
+// }
 
 
 
@@ -162,7 +162,7 @@ $('#submit').on('click', closeStart);
 $('#hearts').on('click', openNav);
 $('#close').on('click', closeNav);
 $('.card').on('click', clickCard);
-$('h1').on('click', checkWinner);
+// $('h1').on('click', checkWinner);
 
 
 
