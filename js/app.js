@@ -4,12 +4,12 @@ $( () => {
         BOARD OBJECT CLASS
   *******************************/
 
-// const class Board {
-//   constructor(id) {
-//     this.boardId: id,
-//     this.points: 0,
-//   }
-// }
+class Board {
+  constructor(id) {
+    this.boardId = id;
+    this.points = 0;
+  }
+}
 
 
   /******************************
@@ -36,7 +36,7 @@ const generateBoards = ($numberOfPlayers) => {
     $grid.append($name);
     $container.append($grid);
     players = i;
-    // const boardObj = new Board(i);
+    const boardObj = new Board(i);
   }
 
   $('img.card').on('click', clickCard);
@@ -63,8 +63,9 @@ const generateBoardsDefault = () => {
     $grid.append($name);
     $container.append($grid);
     players = i;
-    // const boardObj = new Board(i);
+    const boardObj = new Board(i);
   }
+  $('img.card').on('click', clickCard);
 }
 
 
@@ -73,16 +74,16 @@ const generateBoardsDefault = () => {
       CLICKING CARDS
 *******************************/
 
-const clickCard = () => {
+const unclickCard = (event) => {
+  $(event.currentTarget).attr('class', 'card');
+  $(event.currentTarget).on('click', clickCard);
+}
+
+const clickCard = (event) => {
   $(event.currentTarget).attr('class', 'overlay');
   // let grid = $(event.currentTarget).parent().parent().parent();
-
-  const unclickCard = () => {
-    $(event.currentTarget).attr('class', 'card');
-    $('.card').on('click', clickCard);
-  }
-
-  $('.overlay').on('click', unclickCard);
+  $(event.currentTarget).on('click', unclickCard);
+  checkWinner();
 }
 
 
@@ -98,20 +99,32 @@ const clickCard = () => {
 // if returns false, stop
 // if all true, invoke winner function
 
-// const checkWinner = () => {
-//
-//   for (let i = 1; i <= players; i++){
-//     for (let r = 0; r < 4; r++){
-//       for (let card = 0; card < 4; card++){
-//         if ($('#'+ i).eq(0).eq(r).eq(card).hasClass('overlay')) {
-//           console.log('winner');
-//         } else {
-//           return false;
-//         }
-//       }
-//     }
-//   }
-// }
+const checkWinner = () => {
+let $overlay = 0;
+  for (let i = 1; i <= players; i++){
+    let $grid = $(`#${i}`).contents();
+    let $board = $grid.eq(0).contents();
+    // console.log($board);
+    for (let r = 0; r < 4; r++){
+      let $row = $board.eq(r).contents();
+      // console.log($row);
+      for (let card = 0; card < 4; card++) {
+        let $card = $row.eq(card);
+        if ($card.hasClass('overlay')) {
+          $overlay++
+          continue;
+        } else {
+          console.log('break');
+          break;
+        }
+      }
+    }
+  }
+  if ($overlay === 16){
+    console.log('winner');
+  }
+}
+
 
 
 
@@ -161,8 +174,8 @@ const closeNav= () => {
 $('#submit').on('click', closeStart);
 $('#hearts').on('click', openNav);
 $('#close').on('click', closeNav);
-$('.card').on('click', clickCard);
-// $('h1').on('click', checkWinner);
+// $('.card').on('click', clickCard);
+
 
 
 
