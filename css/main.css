@@ -202,3 +202,41 @@ input::-webkit-inner-spin-button {
   position: relative;
   background-color:rgba(181, 25, 92, .5);
 }
+
+/******************************
+          WINNER MODAL
+*******************************/
+
+#modal-winner1 {
+  position: fixed;
+  z-index: 1;/*makes it come to the front.*/
+  justify-content: center;
+  top: 0;
+  left: 0; /*sets margins to 0*/
+  height: 100%;
+  width: 100%; /*makes it take up the whole window*/
+  overflow: visible;
+  line-height: 30px;
+  background-color: rgba(181, 25, 92, 0.9);
+
+  display: none;
+      /*display will change to none when clicked out of.*/
+}
+
+#reset {
+  height: 35px;
+  margin-top: 20px;
+  background-color: white;
+  border: none;
+  color: rgba(181, 25, 92, 1);
+  text-align: center;
+  font-family: arial,sans-serif;
+  font-size: 20px;
+  border-radius: 2px;
+  outline: none;
+}
+
+#reset:hover {
+  background-color: black;
+  color: white;
+}

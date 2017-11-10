@@ -1,18 +1,6 @@
 $( () => {
 
   /******************************
-        BOARD OBJECT CLASS
-  *******************************/
-
-class Board {
-  constructor(id) {
-    this.boardId = id;
-    this.points = 0;
-  }
-}
-
-
-  /******************************
         GENERATE BOARD
   *******************************/
 const $container = $('.container');
@@ -36,9 +24,10 @@ const generateBoards = ($numberOfPlayers) => {
     $grid.append($name);
     $container.append($grid);
     players = i;
-    const boardObj = new Board(i);
   }
-
+        /******************************
+          CLICKING EVENT LISTENER
+        *******************************/
   $('img.card').on('click', clickCard);
 }
 
@@ -63,8 +52,10 @@ const generateBoardsDefault = () => {
     $grid.append($name);
     $container.append($grid);
     players = i;
-    const boardObj = new Board(i);
   }
+          /******************************
+            CLICKING EVENT LISTENER
+          *******************************/
   $('img.card').on('click', clickCard);
 }
 
@@ -81,7 +72,6 @@ const unclickCard = (event) => {
 
 const clickCard = (event) => {
   $(event.currentTarget).attr('class', 'overlay');
-  // let grid = $(event.currentTarget).parent().parent().parent();
   $(event.currentTarget).on('click', unclickCard);
   checkWinner();
 }
@@ -121,24 +111,12 @@ let $overlay = 0;
     }
   }
   if ($overlay === 16){
-    console.log('winner');
+    $('#modal-winner1').css('display', 'block');
+    $('#reset').on('click', ()=> {
+      $('#modal-winner1').css('display', 'none');
+    });
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -146,7 +124,6 @@ let $overlay = 0;
       MODAL EVENT HANDLERS
 *******************************/
 const closeStart= () => {
-  // $('#modal-start').css('display', 'none');
   $('#modal-start').hide('slow');
   let $numberOfPlayers = $('#player-input').val();
   if ($numberOfPlayers > 1){
@@ -154,7 +131,6 @@ const closeStart= () => {
   } else {
     generateBoardsDefault();
   }
-  // console.log(points);
 }
 
 const openNav= () => {
@@ -162,7 +138,6 @@ const openNav= () => {
 }
 
 const closeNav= () => {
-  // $('#modal-instructions').css('display', 'none');
   $('#modal-instructions').hide('slow');
 }
 
@@ -174,7 +149,6 @@ const closeNav= () => {
 $('#submit').on('click', closeStart);
 $('#hearts').on('click', openNav);
 $('#close').on('click', closeNav);
-// $('.card').on('click', clickCard);
 
 
 
