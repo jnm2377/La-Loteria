@@ -148,6 +148,27 @@ input::-webkit-inner-spin-button {
   color: white;
 }
 
+
+/******************************
+          CARD DECK
+*******************************/
+.holdsCards{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
+  margin: auto;
+  width: 75%;
+  height:60%;
+}
+
+.holdsCards > img {
+  display: inline-block;
+  margin: 30px auto;
+  width: 25%;
+  height: 80%;
+  border-radius: 4px;
+  background: pink;
+}
 /******************************
           BOARDS
 *******************************/
