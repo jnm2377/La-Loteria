@@ -9,22 +9,51 @@ $( () => {
       //original array with img src urls
       //empty array
 // when deck div is clicked, select random index url and assign that as the attr src for the "selected card" image
+      // ALSO push random index into empty array (to not repeat images?)
+      //or splice index...
+          //if removing images, have to take into account that Math.random *56 == 56-- each time
       // simultaneously create a new img with src as that selected URL and append it to modal #cardsInPlay
 //when "selected" card image is clicked,
       //open up #cardsInPlay modal
 
 
-const $deck = [];
-const $inPlay = [];
+const $cardsArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+const $cardsArrayCopy = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//for shuffling
+
+const shuffle = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+} //Durnstenfeld shuffle algorithm, shuffles an array and returns that shuffled array.
+//Have array be shuffled when original submit button at start of game is clicked.
+//That way we don't have to randomly select index, but they're already shuffled to begin with, so we can just select index items in order.
+
+let $shuffledArray = shuffle($cardsArrayCopy);
+console.log($shuffledArray);
+//
+// $('#deck').on('click', selectCard);
+//make event listener so that selectCard() is called on click of img (back of card)
+//back of card image never changes
 
 const selectCard = () => {
-  $deck[Math.floor(Math.random() * 56)]
+  let x = $shuffledArray.length - 1;
+  let $cardInPlay = $shuffledArray[x];
+  if (x >= 0){
+    // $('#inPlay').attr('src', $cardInPlay);
+    console.log("card selected: ", $cardInPlay);
+    $shuffledArray.pop($cardInPlay);
+  } else {
+      console.log("you are out of cards");
+  }
 }
 
-
-
-
-
+$('#deck').on('click', selectCard);
 
 
 
