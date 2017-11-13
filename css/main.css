@@ -238,6 +238,25 @@ input::-webkit-inner-spin-button {
   color: white;
 }
 
+#winner {
+  font-size: 70px;
+  line-height: 100px;
+  animation: colorfulName 5s ease infinite;
+}
+
+@keyframes colorfulName {
+  0% {color: white;}
+  10% {color: #4286f4;}
+  20% {color: #b541f4;}
+  30% {color: #f44274;}
+  40% {color: #3ded66;}
+  50% {color: #eaef45;}
+  60% {color: #ef8045;}
+  70% {color: #0b287a;}
+  80% {color: #096d3f;}
+  90% {color: #c11107;}
+  100% {color: #6d1e4a;}
+}
 
 /******************************
           CARD DECK
