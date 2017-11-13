@@ -235,7 +235,7 @@ const closeNav= () => {
       EVENT LISTENERS
 *******************************/
 $('#submit').on('click', closeStart);
-$('#diamonds').on('click', openNav);
+$('#triangle').on('click', openNav);
 $('#close').on('click', closeNav);
 $('#deck').on('click', checkWinner);
 

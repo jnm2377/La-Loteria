@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>LOTERIA</title>
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Julius+Sans+One|Yeseva+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -17,10 +17,8 @@
     <div class="nav">
       <div id=nav-items>
           <h1>LOTERIA</h1>
-        <div id="diamonds">
-          &diams;<br>
-          &diams;<br>
-          &diams;
+        <div id="menu">
+          <span id="triangle">▲</span>
           <!-- write function so that when hearts are clicked, instructions modal is opened -->
         </div>
       </div>
@@ -39,7 +37,7 @@
     <div id="modal-instructions">
       <div class="textbox">
         <h2>About the Game</h2>
-        <p>La Loteria is like Bingo. The object of the game is to black out  your board. A player wins when they are the first to black out their board. Players must click on the deck of cards that is face-down to select a random card. Players must then check their board to see if the card that was picked matches any of the cards on their board. If the cards match, simply mark it out by clicking on it.</p>
+        <p>Loteria is like Bingo. The object of the game is to black out your board. A player wins when they are the first to black out their board. Players must click on the deck of cards on the lefthand side to select a random card. The stack of cards on the right will display the card selected. Players must then check their board to see if the card that was picked matches any of the cards on their board. If the cards match, simply mark it out by clicking on it. To see all the cards already selected, click on the stack of cards furthest right.</p>
         <button id="close">close</button>
         <!-- write function later so that when closed button is clicked,  modal display is changed to none so it closes out. -->
       </div>
@@ -52,9 +50,6 @@
         <button id="reset">reset</button>
       </div>
     </div>
-
-    <!-- <div id="modal-winner2">
-    </div> -->
 
     <div id="cardsInPlay">
     </div>
