@@ -26,14 +26,14 @@ html, body {
 ********************************/
 .nav {
   position: fixed;
-  background-color: #cdd0d7;
+  background-color: rgba(205, 208, 215,1);
   color: white;
   text-align: center;
   font-family: 'Yeseva One', cursive;
   margin-top: -325px;
   width: 100%;
   padding: 0;
-  border: 1px solid #cdd0d7;
+  border: 1px solid rgba(205, 208, 215,1);
 }
 
 #nav-items{
@@ -259,6 +259,59 @@ input::-webkit-inner-spin-button {
 }
 
 /******************************
+      CARDS IN PLAY MODAL
+*******************************/
+
+#modal-cardsInPlay {
+  position: fixed;
+  z-index: 1;/*makes it come to the front.*/
+  justify-content: center;
+  top: 0;
+  left: 0; /*sets margins to 0*/
+  height: 50%;
+  width: 100%; /*makes it take up the whole window*/
+  background-color: rgba(211, 85, 2, .9);
+
+  display: none;
+}
+
+#close2 {
+  height: 35px;
+  margin:20px;
+  background-color: white;
+  border: none;
+  color: rgba(211, 85, 2, 1);
+  text-align: center;
+  font-family: arial,sans-serif;
+  font-size: 20px;
+  border-radius: 2px;
+  outline: none;
+}
+
+#close2:hover {
+  background-color: black;
+  color: white;
+}
+
+#display-cards {
+  background-color: none;
+  height: 70%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 10px;
+}
+
+.modalCard{
+  display: inline;
+  margin: auto;
+  width: 12%;
+  height: 85%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 1);
+}
+
+/******************************
           CARD DECK
 *******************************/
 .holdsCards{
@@ -294,16 +347,16 @@ input::-webkit-inner-spin-button {
           BOARDS
 *******************************/
 
-.container, .grid, .board {
+.container {
   /*border: 1px solid gold;*/
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  overflow: visible;
   margin: 325px auto;
   width: 75%;
+  overflow: visible;
   height: 100%;
 }
 
@@ -365,7 +418,7 @@ input::-webkit-inner-spin-button {
 }
 
 @keyframes glowingPulseTriangle {
-  0% {text-shadow: 0 0 20px #333;}
-  50% {text-shadow: 0 0 20px #e8e247;}
-  100% {text-shadow: 0 0 20px #333;}
+  0% {text-shadow: 0 0 15px #333;}
+  50% {text-shadow: 0 0 22px #d35502;}
+  100% {text-shadow: 0 0 15px #333;}
 }

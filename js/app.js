@@ -92,6 +92,14 @@ const generateBoards = ($numberOfPlayers) => {
     players = i;
   }
         /******************************
+            APPENDING FOOTER
+        *******************************/
+  const $footer = $('<div>').addClass('footer');
+  const $footerText = $('<div>').attr('id', 'footerText');
+  $footerText.html('<h2>Created with <span id= "heart">&hearts;</span> by Josefina Mancilla </h2>');
+  $footer.append($footerText);
+  $container.append($footer);
+        /******************************
           CLICKING EVENT LISTENER
         *******************************/
   $('img.card').on('click', clickCard);
@@ -122,10 +130,20 @@ const generateBoardsDefault = () => {
     $container.append($grid);
     players = i;
   }
+
+        /******************************
+            APPENDING FOOTER
+        *******************************/
+  const $footer = $('<div>').addClass('footer');
+  const $footerText = $('<div>').attr('id', 'footerText');
+  $footerText.html('<h2>Created with <span id= "heart">&hearts;</span> by Josefina Mancilla </h2>');
+  $footer.append($footerText);
+  $container.append($footer);
           /******************************
             CLICKING EVENT LISTENER
           *******************************/
   $('img.card').on('click', clickCard);
+
 }
 
 
@@ -229,6 +247,13 @@ const closeNav= () => {
   $('#modal-instructions').hide('slow');
 }
 
+const openCards = () => {
+  $('#modal-cardsInPlay').show('slow');
+}
+
+const closeCards = () => {
+  $('#modal-cardsInPlay').hide('slow');
+}
 
 
 /******************************
@@ -238,6 +263,8 @@ $('#submit').on('click', closeStart);
 $('#triangle').on('click', openNav);
 $('#close').on('click', closeNav);
 $('#deck').on('click', checkWinner);
+$('#inPlay').on('click', openCards);
+$('#close2').on('click', closeCards);
 
 
 
