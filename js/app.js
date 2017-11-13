@@ -213,7 +213,8 @@ const closeStart= () => {
 }
 
 const openNav= () => {
-  $('#modal-instructions').css('display', 'block');
+  // $('#modal-instructions').css('display', 'block');
+  $('#modal-instructions').show('slow');
 }
 
 const closeNav= () => {
