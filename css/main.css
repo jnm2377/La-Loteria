@@ -6,11 +6,11 @@
               GENERAL
 ********************************/
 html, body {
-  margin: 0;
+  margin: 0; /*Body margins allow content to cover full screen*/
   padding: 0;
-  /*background: rgba(39, 59, 91, 1);*/
   height: 100%;
-} /*Body margins allow content to cover full screen*/
+  /*background: rgba(211, 85, 2, 1);*/
+}
 
 
 .textbox {
@@ -182,6 +182,7 @@ input::-webkit-inner-spin-button {
 #deck:hover, #inPlay:hover {
   opacity: .6;
 }
+
 /******************************
           BOARDS
 *******************************/
@@ -236,6 +237,7 @@ input::-webkit-inner-spin-button {
 
 .row > img:hover {
   opacity: .6;
+  transform: scale(1.1);
 }
 
 .playerName {

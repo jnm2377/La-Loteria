@@ -66,17 +66,22 @@ $('#deck').on('click', selectCard);
   *******************************/
 const $container = $('.container');
 let players = 0;
+const $cardsArrayCopy2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//for board shuffling
 
 const generateBoards = ($numberOfPlayers) => {
   $('.default').remove();
   for (let i = 1; i <= $numberOfPlayers; i++){
+    let x = 0; //will indicate the index number of cards array for img src
+    shuffle($cardsArrayCopy2); //should shuffle array each time it makes a new board
     let $grid = $('<div>').addClass('grid').attr('id', i);
     let $board = $('<div>').addClass('board');
       for (let r=0; r<4; r++){
         let $row = $('<div>').addClass('row');
           for (let img=0 ; img<4; img++){
-            let $img = $('<img>').addClass('card').attr('src', '#');
+            let $img = $('<img>').addClass('card').attr('id', $cardsArrayCopy2[x]);
             $row.append($img);
+            x += 1; //want to loop through array for each image...
           }
         $board.append($row);
       }
@@ -98,13 +103,16 @@ const generateBoards = ($numberOfPlayers) => {
 
 const generateBoardsDefault = () => {
   for (let i = 1; i <= 2; i++){
+    let x = 0; //will indicate the index number of cards array for img src
+    shuffle($cardsArrayCopy2); //should shuffle array each time it makes a new board
     let $grid = $('<div>').addClass('grid').attr('id', i);
     let $board = $('<div>').addClass('board');
       for (let r=0; r<4; r++){
         let $row = $('<div>').addClass('row');
           for (let img=0 ; img<4; img++){
-            let $img = $('<img>').addClass('card').attr('src', '#');
+            let $img = $('<img>').addClass('card').attr('id', $cardsArrayCopy2[x]);
             $row.append($img);
+            x += 1; //want to loop through array for each image...
           }
         $board.append($row);
       }
@@ -188,9 +196,9 @@ console.log($winnerNames);
   //dispays winner message only after checking ALL boards, IF there is a winner
   if ($numOfWinners >= 1){
     $('#winner').text($winnerNames);
-    $('#modal-winner1').css('display', 'block');
+    $('#modal-winner1').show('slow');
     $('#reset').on('click', ()=> {
-      $('#modal-winner1').css('display', 'none');
+      $('#modal-winner1').hide('slow');
       // location.reload();
       // do we want to reload or reset parameters to beginning, and if so, how?
     });
@@ -229,8 +237,8 @@ const closeNav= () => {
 $('#submit').on('click', closeStart);
 $('#diamonds').on('click', openNav);
 $('#close').on('click', closeNav);
-$('h1').on('click', checkWinner);
-      //eventually change this so it runs when deck of cards is clicked!
+$('#deck').on('click', checkWinner);
+
 
 
 
