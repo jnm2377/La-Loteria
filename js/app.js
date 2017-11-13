@@ -226,7 +226,7 @@ const closeNav= () => {
       EVENT LISTENERS
 *******************************/
 $('#submit').on('click', closeStart);
-$('#hearts').on('click', openNav);
+$('#diamonds').on('click', openNav);
 $('#close').on('click', closeNav);
 $('h1').on('click', checkWinner);
       //eventually change this so it runs when deck of cards is clicked!

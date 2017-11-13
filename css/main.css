@@ -8,13 +8,13 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: white;
+  background: rgba(39, 59, 91, 1);
   height: 100%;
 } /*Body margins allow content to cover full screen*/
 
 
 .textbox {
-  margin: 150px auto;
+  margin: 250px auto;
   height: 350px;
   width: 350px;
   color: white;
@@ -26,13 +26,15 @@ html, body {
               NAV
 ********************************/
 .nav {
-  background: rgba(181, 25, 92, 1);;
+  position: fixed;
+  background-color: rgba(211, 85, 2, 1);
   color: white;
   text-align: center;
-  font-family: arial, sans-serif;
-  margin: 0;
+  font-family: 'Julius Sans One', sans-serif;
+  margin-top: -325px;
+  width: 100%;
   padding: 0;
-  border: 1px solid rgba(181, 25, 92, 1);
+  border: 1px solid rgba(211, 85, 2, 1);
 }
 
 #nav-items{
@@ -40,12 +42,13 @@ html, body {
   justify-content: center;
 }
 
-#hearts {
+#diamonds {
   vertical-align: middle;
-  margin: 32px;
+  margin: 0 15px;
+  transform: scale(.5);
 }
 
-#hearts:hover{
+#diamonds:hover{
   color: black;
 }
 
@@ -60,8 +63,9 @@ html, body {
   left: 0; /*sets margins to 0*/
   height: 100%;
   width: 100%; /*makes it take up the whole window*/
-  overflow: visible;
-  background-color: rgba(181, 25, 92, 0.9);
+  overflow: auto;
+  /*background-color: rgba(181, 25, 92, 0.9);*/
+  background-color: rgba(211, 85, 2, 0.9);
 
   display: block;
       /*display will change to none when clicked out of.*/
@@ -97,7 +101,7 @@ input::-webkit-inner-spin-button {
   margin-left: 20px;
   background-color: white;
   border: none;
-  color: rgba(181, 25, 92, 1);
+  color: rgba(211, 85, 2, 1);
   text-align: center;
   font-family: arial,sans-serif;
   font-size: 20px;
@@ -122,9 +126,10 @@ input::-webkit-inner-spin-button {
   left: 0; /*sets margins to 0*/
   height: 100%;
   width: 100%; /*makes it take up the whole window*/
-  overflow: visible;
+  overflow: auto;
   line-height: 30px;
-  background-color: rgba(181, 25, 92, 0.9);
+  /*background-color: rgba(181, 25, 92, 0.9);*/
+  background-color: rgba(211, 85, 2, 0.9);
 
   display: none;
       /*display will change to none when clicked out of.*/
@@ -135,7 +140,7 @@ input::-webkit-inner-spin-button {
   margin-top: 20px;
   background-color: white;
   border: none;
-  color: rgba(181, 25, 92, 1);
+  color: rgba(211, 85, 2, 1);
   text-align: center;
   font-family: arial,sans-serif;
   font-size: 20px;
@@ -153,75 +158,92 @@ input::-webkit-inner-spin-button {
           CARD DECK
 *******************************/
 .holdsCards{
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
-  overflow: visible;
-  margin: auto;
-  width: 75%;
-  height:60%;
+  overflow: auto;
+  margin-top: -245px;
+  width: 100%;
+  height:30%;
+  /*background-color: rgba(211, 85, 2, 0.5);*/
+  background: rgba( 255, 255, 255, .8);
+
 }
 
 .holdsCards > img {
   display: inline-block;
-  margin: 30px auto;
-  width: 25%;
-  height: 80%;
+  margin: auto;
+  width: 12%;
+  height: 85%;
   border-radius: 4px;
-  background: pink;
+  background: rgba(211, 85, 2, 0.9);
+}
+
+#deck:hover, #inPlay:hover {
+  opacity: .6;
 }
 /******************************
           BOARDS
 *******************************/
 
 .container, .grid, .board {
-  border: 1px solid gold;
+  /*border: 1px solid gold;*/
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   overflow: visible;
-  margin: auto;
+  margin: 325px auto;
   width: 75%;
   height: 100%;
 }
 
 .grid {
   height: 80%;
-  width: 40%;
+  width: 45%;
   margin: 50px auto;
+  background: rgba( 255, 255, 255, .6);
 }
 
 .board {
-  height: 90%;
-  width: 100%;
-  margin: auto;
+  height: 88%;
+  width: 95%;
+  margin: 10px auto;
 }
 
 .row {
   display: flex;
   background: gray;
   outline: inherit;
-  /*border: 1px solid red;*/
   height: 25%;
   width: 100%;
   justify-content: center;
 }
 
 .card {
-  background: pink;
+  background: white;
   margin: 2px;
   height: 96%;
   width: 25%;
 }
 
 .overlay {
-  background: pink;
   margin: 2px;
   height: 96%;
   width: 25%;
   position: relative;
-  background-color:rgba(181, 25, 92, .5);
+  background: rgba(211, 85, 2, 0.9);
+}
+
+.row > img:hover {
+  opacity: .6;
+}
+
+.playerName {
+  color: white;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
 }
 
 /******************************
@@ -236,9 +258,9 @@ input::-webkit-inner-spin-button {
   left: 0; /*sets margins to 0*/
   height: 100%;
   width: 100%; /*makes it take up the whole window*/
-  overflow: visible;
+  overflow: auto;
   line-height: 30px;
-  background-color: rgba(181, 25, 92, 0.9);
+  background-color: rgba(211, 85, 2, 0.9);
 
   display: none;
       /*display will change to none when clicked out of.*/
@@ -249,7 +271,7 @@ input::-webkit-inner-spin-button {
   margin-top: 20px;
   background-color: white;
   border: none;
-  color: rgba(181, 25, 92, 1);
+  color: rgba(211, 85, 2, 1);
   text-align: center;
   font-family: arial,sans-serif;
   font-size: 20px;
