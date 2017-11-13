@@ -19,14 +19,6 @@ html, body {
   100% { background-position: -400px 0; }
 }
 
-.textbox {
-  margin: 150px auto;
-  height: 350px;
-  width: 350px;
-  color: white;
-  font-family: arial, sans-serif;
-  text-align: center;
-}
 
 
 /*******************************
@@ -34,7 +26,6 @@ html, body {
 ********************************/
 .nav {
   position: fixed;
-  /*background-color: rgba(211, 85, 2, 1);*/
   background-color: #cdd0d7;
   color: white;
   text-align: center;
@@ -53,7 +44,6 @@ html, body {
 #menu {
   vertical-align: middle;
   margin: auto 30px;
-  /*transform: scale(.5);*/
 }
 
 
@@ -67,6 +57,46 @@ html, body {
   color: black;
 }
 
+/******************************
+            FOOTER
+*******************************/
+.footer {
+  height: 7%;
+  width: 60%;
+  margin: 30px auto;
+  border-radius: 8px;
+  background-color: rgba(205, 208, 215, .1);
+}
+
+#footerText{
+  margin: auto;
+  padding: 8px;
+}
+
+#footerText > h2 {
+  margin: auto;
+  color: white;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+
+#heart {
+  color: rgba(211, 85, 2, 1);
+}
+
+/******************************
+          ALL MODALS
+*******************************/
+
+.textbox {
+  margin: 150px auto;
+  height: 350px;
+  width: 350px;
+  color: white;
+  font-family: arial, sans-serif;
+  text-align: center;
+}
 
 /******************************
           START MODAL
@@ -171,6 +201,45 @@ input::-webkit-inner-spin-button {
 
 
 /******************************
+          WINNER MODAL
+*******************************/
+
+#modal-winner1 {
+  position: fixed;
+  z-index: 1;/*makes it come to the front.*/
+  justify-content: center;
+  top: 0;
+  left: 0; /*sets margins to 0*/
+  height: 100%;
+  width: 100%; /*makes it take up the whole window*/
+  overflow: auto;
+  line-height: 30px;
+  background-color: rgba(211, 85, 2, 0.9);
+
+  display: none;
+      /*display will change to none when clicked out of.*/
+}
+
+#reset {
+  height: 35px;
+  margin-top: 20px;
+  background-color: white;
+  border: none;
+  color: rgba(211, 85, 2, 1);
+  text-align: center;
+  font-family: arial,sans-serif;
+  font-size: 20px;
+  border-radius: 2px;
+  outline: none;
+}
+
+#reset:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/******************************
           CARD DECK
 *******************************/
 .holdsCards{
@@ -199,7 +268,6 @@ input::-webkit-inner-spin-button {
 }
 
 #deck:hover, #inPlay:hover {
-  /*opacity: .6;*/
   transform: scale(1.1);
 }
 
@@ -266,45 +334,11 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 
+
+
 /******************************
-          WINNER MODAL
+      GLOWING ANIMATIONS
 *******************************/
-
-#modal-winner1 {
-  position: fixed;
-  z-index: 1;/*makes it come to the front.*/
-  justify-content: center;
-  top: 0;
-  left: 0; /*sets margins to 0*/
-  height: 100%;
-  width: 100%; /*makes it take up the whole window*/
-  overflow: auto;
-  line-height: 30px;
-  background-color: rgba(211, 85, 2, 0.9);
-
-  display: none;
-      /*display will change to none when clicked out of.*/
-}
-
-#reset {
-  height: 35px;
-  margin-top: 20px;
-  background-color: white;
-  border: none;
-  color: rgba(211, 85, 2, 1);
-  text-align: center;
-  font-family: arial,sans-serif;
-  font-size: 20px;
-  border-radius: 2px;
-  outline: none;
-}
-
-#reset:hover {
-  background-color: black;
-  color: white;
-}
-
-
 @keyframes glowingPulse {
   0% {box-shadow: 0 0 12px #333; }
   50% {box-shadow: 0 0 18px #e8e247; }
