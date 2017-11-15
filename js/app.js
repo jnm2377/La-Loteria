@@ -17,9 +17,9 @@ $( () => {
       //open up #cardsInPlay modal
 
 
-const $cardsArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const $cardsArray = ["../images/Loteria_cards/el_alacran.jpg", "../images/Loteria_cards/el_arbol.jpg", "../images/Loteria_cards/el_barril.jpg", "../images/Loteria_cards/el_borracho.jpg", "../images/Loteria_cards/el_cantarito.jpg", "../images/Loteria_cards/el_catrin.jpg", "../images/Loteria_cards/el_cazo.jpg", "../images/Loteria_cards/el_corazon.jpg", "../images/Loteria_cards/el_cotorro.jpg", "../images/Loteria_cards/el_diablito.jpg", "../images/Loteria_cards/el_gorrito.jpg", "../images/Loteria_cards/el_mundo.jpg", "../images/Loteria_cards/el_nopal.jpg", "../images/Loteria_cards/el_paraguas.jpg", "../images/Loteria_cards/el_pino.jpg", "../images/Loteria_cards/el_sol.jpg", "../images/Loteria_cards/el_tambor.jpg", "../images/Loteria_cards/el_valiente.jpg", "../images/Loteria_cards/el_violoncello.jpg", "../images/Loteria_cards/la_bandera.jpg", "../images/Loteria_cards/la_bota.jpg", "../images/Loteria_cards/la_calavera.jpg", "../images/Loteria_cards/la_campana.jpg", "../images/Loteria_cards/la_corona.jpg", "../images/Loteria_cards/la_escalera.jpg", "../images/Loteria_cards/la_estrella.jpg", "../images/Loteria_cards/la_luna.jpg", "../images/Loteria_cards/la_maceta.jpg", "../images/Loteria_cards/la_mano.jpg", "../images/Loteria_cards/la_palma.jpg", "../images/Loteria_cards/la_pera.jpg", "../images/Loteria_cards/la_rosa.jpg", "../images/Loteria_cards/la_sandia.jpg", "../images/Loteria_cards/la_sirena.jpg", "../images/Loteria_cards/las_jaras.jpg"];
 
-const $cardsArrayCopy = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const $cardsArrayCopy = ["../images/Loteria_cards/el_alacran.jpg", "../images/Loteria_cards/el_arbol.jpg", "../images/Loteria_cards/el_barril.jpg", "../images/Loteria_cards/el_borracho.jpg", "../images/Loteria_cards/el_cantarito.jpg", "../images/Loteria_cards/el_catrin.jpg", "../images/Loteria_cards/el_cazo.jpg", "../images/Loteria_cards/el_corazon.jpg", "../images/Loteria_cards/el_cotorro.jpg", "../images/Loteria_cards/el_diablito.jpg", "../images/Loteria_cards/el_gorrito.jpg", "../images/Loteria_cards/el_mundo.jpg", "../images/Loteria_cards/el_nopal.jpg", "../images/Loteria_cards/el_paraguas.jpg", "../images/Loteria_cards/el_pino.jpg", "../images/Loteria_cards/el_sol.jpg", "../images/Loteria_cards/el_tambor.jpg", "../images/Loteria_cards/el_valiente.jpg", "../images/Loteria_cards/el_violoncello.jpg", "../images/Loteria_cards/la_bandera.jpg", "../images/Loteria_cards/la_bota.jpg", "../images/Loteria_cards/la_calavera.jpg", "../images/Loteria_cards/la_campana.jpg", "../images/Loteria_cards/la_corona.jpg", "../images/Loteria_cards/la_escalera.jpg", "../images/Loteria_cards/la_estrella.jpg", "../images/Loteria_cards/la_luna.jpg", "../images/Loteria_cards/la_maceta.jpg", "../images/Loteria_cards/la_mano.jpg", "../images/Loteria_cards/la_palma.jpg", "../images/Loteria_cards/la_pera.jpg", "../images/Loteria_cards/la_rosa.jpg", "../images/Loteria_cards/la_sandia.jpg", "../images/Loteria_cards/la_sirena.jpg", "../images/Loteria_cards/las_jaras.jpg"];
 //for shuffling
 
 const shuffle = (array) => {
@@ -45,8 +45,8 @@ const selectCard = () => {
   let x = $shuffledArray.length - 1;
   let $cardInPlay = $shuffledArray[x];
   if (x >= 0){
-    // $('#inPlay').attr('src', $cardInPlay);
-    console.log("card selected: ", $cardInPlay);
+    $('#inPlay').attr('src', $cardInPlay);
+    // console.log("card selected: ", $cardInPlay);
     $shuffledArray.pop($cardInPlay);
   } else {
       console.log("you are out of cards");
@@ -66,7 +66,7 @@ $('#deck').on('click', selectCard);
   *******************************/
 const $container = $('.container');
 let players = 0;
-const $cardsArrayCopy2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const $cardsArrayCopy2 = ["../images/Loteria_cards/el_alacran.jpg", "../images/Loteria_cards/el_arbol.jpg", "../images/Loteria_cards/el_barril.jpg", "../images/Loteria_cards/el_borracho.jpg", "../images/Loteria_cards/el_cantarito.jpg", "../images/Loteria_cards/el_catrin.jpg", "../images/Loteria_cards/el_cazo.jpg", "../images/Loteria_cards/el_corazon.jpg", "../images/Loteria_cards/el_cotorro.jpg", "../images/Loteria_cards/el_diablito.jpg", "../images/Loteria_cards/el_gorrito.jpg", "../images/Loteria_cards/el_mundo.jpg", "../images/Loteria_cards/el_nopal.jpg", "../images/Loteria_cards/el_paraguas.jpg", "../images/Loteria_cards/el_pino.jpg", "../images/Loteria_cards/el_sol.jpg", "../images/Loteria_cards/el_tambor.jpg", "../images/Loteria_cards/el_valiente.jpg", "../images/Loteria_cards/el_violoncello.jpg", "../images/Loteria_cards/la_bandera.jpg", "../images/Loteria_cards/la_bota.jpg", "../images/Loteria_cards/la_calavera.jpg", "../images/Loteria_cards/la_campana.jpg", "../images/Loteria_cards/la_corona.jpg", "../images/Loteria_cards/la_escalera.jpg", "../images/Loteria_cards/la_estrella.jpg", "../images/Loteria_cards/la_luna.jpg", "../images/Loteria_cards/la_maceta.jpg", "../images/Loteria_cards/la_mano.jpg", "../images/Loteria_cards/la_palma.jpg", "../images/Loteria_cards/la_pera.jpg", "../images/Loteria_cards/la_rosa.jpg", "../images/Loteria_cards/la_sandia.jpg", "../images/Loteria_cards/la_sirena.jpg", "../images/Loteria_cards/las_jaras.jpg"];
 //for board shuffling
 
 const generateBoards = ($numberOfPlayers) => {
@@ -79,7 +79,7 @@ const generateBoards = ($numberOfPlayers) => {
       for (let r=0; r<4; r++){
         let $row = $('<div>').addClass('row');
           for (let img=0 ; img<4; img++){
-            let $img = $('<img>').addClass('card').attr('id', $cardsArrayCopy2[x]);
+            let $img = $('<img>').addClass('card').attr('src', $cardsArrayCopy2[x]);
             $row.append($img);
             x += 1; //want to loop through array for each image...
           }
@@ -118,7 +118,7 @@ const generateBoardsDefault = () => {
       for (let r=0; r<4; r++){
         let $row = $('<div>').addClass('row');
           for (let img=0 ; img<4; img++){
-            let $img = $('<img>').addClass('card').attr('id', $cardsArrayCopy2[x]);
+            let $img = $('<img>').addClass('card').attr('src', $cardsArrayCopy2[x]);
             $row.append($img);
             x += 1; //want to loop through array for each image...
           }
