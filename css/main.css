@@ -11,13 +11,13 @@ html, body {
   height: 100%;
   width: 100%;
   background: gray url('https://i.imgur.com/NaV05E3.png') repeat 0 0;
-  animation: slide 20s linear infinite;
+  animation: backgroundSlide 20s linear infinite;
 }
 
-@keyframes slide {
+@keyframes backgroundSlide {
   0% { background-position: 0 0; }
   100% { background-position: -400px 0; }
-}
+} /*infinite translating image */
 
 
 
@@ -135,12 +135,12 @@ input::placeholder {
 
 input[type='number'] {
     -moz-appearance:textfield;
-}
+} /*make number look like text (so it'll be styled the same)*/
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-}
+} /*removes arrow buttons from number input*/
 
 #submit {
   height: 35px;
