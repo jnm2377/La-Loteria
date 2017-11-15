@@ -55,6 +55,7 @@ html, body {
 }
 #triangle:hover{
   color: black;
+  cursor: pointer;
 }
 
 /******************************
@@ -105,6 +106,7 @@ html, body {
   position: fixed;
   z-index: 1;/*makes it come to the front.*/
   justify-content: center;
+  line-height: 30px;
   top: 0;
   left: 0; /*sets margins to 0*/
   height: 100%;
