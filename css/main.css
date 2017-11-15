@@ -306,7 +306,7 @@ input::-webkit-inner-spin-button {
 
 .modalCard{
   display: inline;
-  margin: auto;
+  margin: 5px;
   width: 12%;
   height: 85%;
   border-radius: 4px;
