@@ -48,7 +48,7 @@ No installation is needed for this game. The only pre-requisites are good wifi, 
 
 ## Deployment
 
-At the moment, this game must be deployed on a computer browser since it is not mobile-browser friendly. It is my hope that in the future, players will have this game available to them on their mobile browsers as well.
+This game is best deployed on a computer browser since it is designed for a wide screen. Though mobile browsers will display the game correctly if it is played in landscape view. It is my hope that in the future, players will have this game available to them in a more mobile-browser-friendly way upon creating responsive code for narrow browsers.
 
 ## Built With
 
