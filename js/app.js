@@ -222,9 +222,10 @@ console.log($winnerNames);
     $('#winner').text($winnerNames);
     $('#modal-winner1').show('slow');
     $('#reset').on('click', ()=> {
-      $('#modal-winner1').hide('slow');
       location.reload();
-      // do we want to reload or reset parameters to beginning, and if so, how?
+    });
+    $('#close3').on('click', () => {
+      $('#modal-winner1').hide('slow');
     });
   }
 }
@@ -234,6 +235,7 @@ console.log($winnerNames);
 /******************************
       MODAL EVENT HANDLERS
 *******************************/
+
 const closeStart= () => {
   $('#modal-start').hide('slow');
   let $numberOfPlayers = $('#player-input').val();
@@ -271,6 +273,11 @@ $('#close').on('click', closeNav);
 $('#deck').on('click', checkWinner);
 $('#inPlay').on('click', openCards);
 $('#close2').on('click', closeCards);
+// $('#player-input').on('keydown', (event) => {
+//   if(event.keycode === 13){
+//     $('#submit').click();
+//   }
+// });
 
 
 
