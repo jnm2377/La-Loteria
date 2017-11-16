@@ -5,25 +5,25 @@ The online game of Loteria - much like bingo - is played with a minimum of 2 pla
 ## Getting Started
 
 Start by inputting the number of players for the game. If user gives no input, the game will default to 2 players.
-![Number of players: 2](http://url/to/img.png)
+![Number of players: 2](images/read_me_images/number_of_players.png)
 ```
 Number of players: 2
 ```
 
 The two stacks of cards at the top of the page represent the shuffled deck (on the left-hand side) and the cards selected (on the right-hand side).
-![Blank decks at start](http://url/to/img.png)
+![Blank decks at start](images/read_me_images/blank_decks.png)
 ```
 Blank decks at start
 ```
 
 When a player clicks on the shuffled deck, the other deck will display the card selected.
-![Card selected deck is displaying card after click](http://url/to/img.png)
+![Card selected deck is displaying card after click](images/read_me_images/card_selected.png)
 ```
 Card selected deck is displaying card after click
 ```
 
  When a player clicks on the cards selected deck, a modal will open with an image of all the cards that have been selected in the past rounds.
- ![Cards selected modal](http://url/to/img.png)
+ ![Cards selected modal](images/read_me_images/card_selected_modal.png)
  ```
  Cards selected modal  
  ```
@@ -35,7 +35,7 @@ To see the instructions live, click on the triangle nav button at the top.
 ### Game-Rounds
 
 Each time a player clicks on the shuffled deck to select a card, the computer will check for a winner. If no player has marked out their board, the game will continue. If a player has marked out their entire board, another modal will appear announcing the winner name and then reset the game.
-![Winner modal](http://url/to/img.png)
+![Winner modal](images/read_me_images/winner_modal.png)
 ```
 Winner modal
 ```
