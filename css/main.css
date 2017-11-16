@@ -391,11 +391,12 @@ input::-webkit-inner-spin-button {
   width: 25%;
 }
 
+
 .overlay {
   margin: 2px;
   height: 96%;
   width: 25%;
-  background: rgba(211, 85, 2, 0.9);
+  opacity: 0.2;
 }
 
 .row > img:hover {

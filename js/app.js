@@ -37,9 +37,9 @@ const shuffle = (array) => {
 //That way we don't have to randomly select index, but they're already shuffled to begin with, so we can just select index items in order.
 
 let $shuffledArray = shuffle($cardsArrayCopy);
-console.log($shuffledArray);
+// console.log($shuffledArray);
 //
-// $('#deck').on('click', selectCard);
+
 //make event listener so that selectCard() is called on click of img (back of card)
 //back of card image never changes
 
@@ -108,7 +108,7 @@ const generateBoards = ($numberOfPlayers) => {
         /******************************
           CLICKING EVENT LISTENER
         *******************************/
-  $('img.card').on('click', clickCard);
+  $('.card').on('click', clickCard);
 }
 
 /******************************
@@ -148,7 +148,7 @@ const generateBoardsDefault = () => {
           /******************************
             CLICKING EVENT LISTENER
           *******************************/
-  $('img.card').on('click', clickCard);
+  $('.card').on('click', clickCard);
 
 }
 
@@ -223,7 +223,7 @@ console.log($winnerNames);
     $('#modal-winner1').show('slow');
     $('#reset').on('click', ()=> {
       $('#modal-winner1').hide('slow');
-      // location.reload();
+      location.reload();
       // do we want to reload or reset parameters to beginning, and if so, how?
     });
   }
