@@ -415,9 +415,9 @@ input::-webkit-inner-spin-button {
       GLOWING ANIMATIONS
 *******************************/
 @keyframes glowingPulse {
-  0% {box-shadow: 0 0 12px #333; }
-  50% {box-shadow: 0 0 18px #e8e247; }
-  100% {box-shadow: 0 0 12px #333; }
+  0% {box-shadow: 0 0 15px #333; }
+  50% {box-shadow: 0 0 22px #d35502; }
+  100% {box-shadow: 0 0 15px #333; }
 }
 
 @keyframes glowingPulseTriangle {
