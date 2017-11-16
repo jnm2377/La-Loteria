@@ -211,7 +211,7 @@ console.log($winnerNames);
           continue;
           //will keep looping until false
         } else {
-          console.log('break');
+          // console.log('break');
           break;
         }
       }
